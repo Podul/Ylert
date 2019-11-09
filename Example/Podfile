@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'Ylert_Example' do
+  pod 'Ylert', :path => '../'
+
+  target 'Ylert_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
