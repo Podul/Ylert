@@ -1,0 +1,16 @@
+PODS:
+  - Ylert (0.1.0)
+
+DEPENDENCIES:
+  - Ylert (from `../`)
+
+EXTERNAL SOURCES:
+  Ylert:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Ylert: e7282ab93e0c8e1c636805937d1f46029648dee1
+
+PODFILE CHECKSUM: a08fce6b6985b9c184f4aa0a71bcf6236bed177e
+
+COCOAPODS: 1.7.1
