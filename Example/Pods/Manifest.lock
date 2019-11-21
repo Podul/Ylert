@@ -1,5 +1,5 @@
 PODS:
-  - Ylert (0.1.0)
+  - Ylert (0.1.1)
 
 DEPENDENCIES:
   - Ylert (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Ylert: e7282ab93e0c8e1c636805937d1f46029648dee1
+  Ylert: 634669073d36dfaacc48e05c40aa389eb2010a36
 
 PODFILE CHECKSUM: a08fce6b6985b9c184f4aa0a71bcf6236bed177e
 

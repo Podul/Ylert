@@ -10,13 +10,13 @@
 		284F73D590AB9C27DDA349FADE363421 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		31BE4FCFE3C60A1EA197259236BB395F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		3AB8813C2FCBBA081AFCC49DB4B686AA /* Pods-Ylert_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 70AA78776FBB5CA24C873FE36CF32823 /* Pods-Ylert_Tests-dummy.m */; };
-		3BF914782D90BDA90EC925758BF47ED5 /* Ylert-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C974FB8C1E3C7ADEC996934E76904046 /* Ylert-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BF914782D90BDA90EC925758BF47ED5 /* Ylert-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FF08BA1EFD8C9EF918BA6C693297574B /* Ylert-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3DB91DF46138F4392284AD899BE51712 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		54286C9BC6B65ED8993225C2B8937A47 /* Pods-Ylert_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CAEE805B4E293465743BD6EF4650FEBE /* Pods-Ylert_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		803E5DA6F8CCC8717E72A1885355896E /* Pods-Ylert_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 49E503051D2BFA26CF8C06E65F6A504C /* Pods-Ylert_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D0B5B861D471466F105E599B6F38D1A7 /* Ylert-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CCFBF447D32EDCEEF8BF4BDDD3939A6A /* Ylert-dummy.m */; };
+		CE3115755648A4B0582CA864A850B51B /* UIAlertController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A69C82F2929770F9AE6B839B25E3BA5 /* UIAlertController+Alert.swift */; };
+		D0B5B861D471466F105E599B6F38D1A7 /* Ylert-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F4B3598E48B5F299BE5733C4A86567 /* Ylert-dummy.m */; };
 		D2CD537957BE74BC0F96FA9367B8EFE6 /* Pods-Ylert_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6023979C44592277DB001930AE445C5C /* Pods-Ylert_Example-dummy.m */; };
-		D76E88CB4C4012A0D6657AF091DEE501 /* UIAlertController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A0DB0FBA6FE6BEF72841E90DED8A51 /* UIAlertController+Alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,38 +37,38 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00F4B3598E48B5F299BE5733C4A86567 /* Ylert-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Ylert-dummy.m"; sourceTree = "<group>"; };
 		019B35716951296219EB08861F4A49B2 /* Pods-Ylert_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Ylert_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		038B138DF4BE4DB47385574305757C49 /* Pods-Ylert_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Ylert_Example-Info.plist"; sourceTree = "<group>"; };
-		07814A3239C17831E6E4151F8AF42324 /* Pods_Ylert_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ylert_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1450778FE0F89A8C8B03C82E6D2BFE41 /* Ylert.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Ylert.modulemap; sourceTree = "<group>"; };
-		18FF8285AD9563357677664606F76E6C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		05948A22AA1D47B120CEB24B60D8A078 /* Ylert.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Ylert.modulemap; sourceTree = "<group>"; };
+		07814A3239C17831E6E4151F8AF42324 /* Pods_Ylert_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Ylert_Tests.framework; path = "Pods-Ylert_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A69C82F2929770F9AE6B839B25E3BA5 /* UIAlertController+Alert.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIAlertController+Alert.swift"; path = "Source/Classes/UIAlertController+Alert.swift"; sourceTree = "<group>"; };
+		2B7B35C055C7A6FE9D18A0CC718363D0 /* Ylert.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Ylert.xcconfig; sourceTree = "<group>"; };
 		2D227DFE645759AB12429AC0DC46BB09 /* Pods-Ylert_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Ylert_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		3E3B83B94B7CDC160D45EA6F1F78A2A4 /* Pods-Ylert_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Ylert_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		49E503051D2BFA26CF8C06E65F6A504C /* Pods-Ylert_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Ylert_Example-umbrella.h"; sourceTree = "<group>"; };
+		4D8DBD1243C97845025BA70D3AA00C9D /* Ylert-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Ylert-Info.plist"; sourceTree = "<group>"; };
+		4EF0191BD303423450410DE5F191EB9D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		514A9072D32330633AF1A9705B2754D6 /* Pods-Ylert_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Ylert_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		587618E06DB9D17D1E033B60027ABAC0 /* Ylert.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = Ylert.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		5D887AC576E746F55B0814575AA0AEAB /* Pods-Ylert_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Ylert_Example.modulemap"; sourceTree = "<group>"; };
 		6023979C44592277DB001930AE445C5C /* Pods-Ylert_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Ylert_Example-dummy.m"; sourceTree = "<group>"; };
-		678D12F5FF0DA2202015D46AFF35D284 /* Ylert.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Ylert.xcconfig; sourceTree = "<group>"; };
+		67F265AB763DB0C4447CA1A294A14920 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		70AA78776FBB5CA24C873FE36CF32823 /* Pods-Ylert_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Ylert_Tests-dummy.m"; sourceTree = "<group>"; };
-		8452F64C378143ABBFBFCD709AA74FFA /* Ylert.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Ylert.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8452F64C378143ABBFBFCD709AA74FFA /* Ylert.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Ylert.framework; path = Ylert.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		86978D48F7151639A9871250675A2007 /* Pods-Ylert_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Ylert_Example-frameworks.sh"; sourceTree = "<group>"; };
 		891B44D11CF8BF76B665AC9EFAFD02AD /* Pods-Ylert_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Ylert_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		9845EBE1BD139BC217153EB6FCE39628 /* Ylert-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Ylert-prefix.pch"; sourceTree = "<group>"; };
 		9894C9BD6D0D1DBB45B72EE0DC083DFE /* Pods-Ylert_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Ylert_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A00EAB03F833BDF1DAC68A95BC441C64 /* Pods-Ylert_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Ylert_Example.release.xcconfig"; sourceTree = "<group>"; };
-		A32E5A297A852DBDEF508D7123D1E3B8 /* Ylert.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = Ylert.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A4C78EFC0D2D22EAAB0CCC5460F7C87A /* Pods-Ylert_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Ylert_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		B4A0DB0FBA6FE6BEF72841E90DED8A51 /* UIAlertController+Alert.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIAlertController+Alert.swift"; path = "Ylert/Classes/UIAlertController+Alert.swift"; sourceTree = "<group>"; };
-		BFD210344C471B55446D513B619B2238 /* Pods_Ylert_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ylert_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C974FB8C1E3C7ADEC996934E76904046 /* Ylert-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Ylert-umbrella.h"; sourceTree = "<group>"; };
+		BFD210344C471B55446D513B619B2238 /* Pods_Ylert_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Ylert_Example.framework; path = "Pods-Ylert_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAEE805B4E293465743BD6EF4650FEBE /* Pods-Ylert_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Ylert_Tests-umbrella.h"; sourceTree = "<group>"; };
-		CCFBF447D32EDCEEF8BF4BDDD3939A6A /* Ylert-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Ylert-dummy.m"; sourceTree = "<group>"; };
-		D6D574C9637EF238478B8347FA8AF2FB /* Ylert-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Ylert-Info.plist"; sourceTree = "<group>"; };
-		DA70A65D5A68C8744B99D8818C2D5E12 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E1F63F5F5D607FAAC41BE7C63E6A15DA /* Pods-Ylert_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Ylert_Tests.modulemap"; sourceTree = "<group>"; };
 		E82B496953C89A78DAB811582632CCA2 /* Pods-Ylert_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Ylert_Tests-Info.plist"; sourceTree = "<group>"; };
+		EA03EF2F658E021F84C79EDC4D138800 /* Ylert-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Ylert-prefix.pch"; sourceTree = "<group>"; };
+		FF08BA1EFD8C9EF918BA6C693297574B /* Ylert-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Ylert-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +99,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0FDF4F36725D70677A43E2759F98D1AA /* Ylert */ = {
+			isa = PBXGroup;
+			children = (
+				0A69C82F2929770F9AE6B839B25E3BA5 /* UIAlertController+Alert.swift */,
+				C1D0A074561EBFAAE164E1A8F66D56F0 /* Pod */,
+				AD2488A9130676808DD9979D9CF375A5 /* Support Files */,
+			);
+			name = Ylert;
+			path = ../..;
+			sourceTree = "<group>";
+		};
 		40EB0FBF6D3DDCAD80417DBA3F8B56D2 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,24 +119,10 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		56EBF6B364F53741306EDFB844F25EC4 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				1450778FE0F89A8C8B03C82E6D2BFE41 /* Ylert.modulemap */,
-				678D12F5FF0DA2202015D46AFF35D284 /* Ylert.xcconfig */,
-				CCFBF447D32EDCEEF8BF4BDDD3939A6A /* Ylert-dummy.m */,
-				D6D574C9637EF238478B8347FA8AF2FB /* Ylert-Info.plist */,
-				9845EBE1BD139BC217153EB6FCE39628 /* Ylert-prefix.pch */,
-				C974FB8C1E3C7ADEC996934E76904046 /* Ylert-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/Ylert";
-			sourceTree = "<group>";
-		};
 		6CCDBC852251B62EFFFE8B20F93AE880 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				AA21B4C89A82723BB21A90F4BC955B5A /* Ylert */,
+				0FDF4F36725D70677A43E2759F98D1AA /* Ylert */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -140,15 +137,18 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AA21B4C89A82723BB21A90F4BC955B5A /* Ylert */ = {
+		AD2488A9130676808DD9979D9CF375A5 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				B4A0DB0FBA6FE6BEF72841E90DED8A51 /* UIAlertController+Alert.swift */,
-				F50AC5CC2DA54FE1CABE902596E11035 /* Pod */,
-				56EBF6B364F53741306EDFB844F25EC4 /* Support Files */,
+				05948A22AA1D47B120CEB24B60D8A078 /* Ylert.modulemap */,
+				2B7B35C055C7A6FE9D18A0CC718363D0 /* Ylert.xcconfig */,
+				00F4B3598E48B5F299BE5733C4A86567 /* Ylert-dummy.m */,
+				4D8DBD1243C97845025BA70D3AA00C9D /* Ylert-Info.plist */,
+				EA03EF2F658E021F84C79EDC4D138800 /* Ylert-prefix.pch */,
+				FF08BA1EFD8C9EF918BA6C693297574B /* Ylert-umbrella.h */,
 			);
-			name = Ylert;
-			path = ../..;
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/Ylert";
 			sourceTree = "<group>";
 		};
 		B8D87C0C1440D9D55031B9C5E9422167 /* Pods-Ylert_Example */ = {
@@ -174,6 +174,16 @@
 				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		C1D0A074561EBFAAE164E1A8F66D56F0 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				4EF0191BD303423450410DE5F191EB9D /* LICENSE */,
+				67F265AB763DB0C4447CA1A294A14920 /* README.md */,
+				587618E06DB9D17D1E033B60027ABAC0 /* Ylert.podspec */,
+			);
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -209,16 +219,6 @@
 			);
 			name = "Pods-Ylert_Tests";
 			path = "Target Support Files/Pods-Ylert_Tests";
-			sourceTree = "<group>";
-		};
-		F50AC5CC2DA54FE1CABE902596E11035 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				18FF8285AD9563357677664606F76E6C /* LICENSE */,
-				DA70A65D5A68C8744B99D8818C2D5E12 /* README.md */,
-				A32E5A297A852DBDEF508D7123D1E3B8 /* Ylert.podspec */,
-			);
-			name = Pod;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,11 +315,6 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 1100;
-				TargetAttributes = {
-					947BA903C2DCA390677C6EFDC875AF87 = {
-						LastSwiftMigration = 1110;
-					};
-				};
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -377,7 +372,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D76E88CB4C4012A0D6657AF091DEE501 /* UIAlertController+Alert.swift in Sources */,
+				CE3115755648A4B0582CA864A850B51B /* UIAlertController+Alert.swift in Sources */,
 				D0B5B861D471466F105E599B6F38D1A7 /* Ylert-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -508,9 +503,9 @@
 			};
 			name = Debug;
 		};
-		789CBB8ABACD1478B89D70FA4874879D /* Release */ = {
+		A16001328CA6AA69251BDD7693E69171 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 678D12F5FF0DA2202015D46AFF35D284 /* Ylert.xcconfig */;
+			baseConfigurationReference = 2B7B35C055C7A6FE9D18A0CC718363D0 /* Ylert.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -524,7 +519,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Ylert/Ylert-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Ylert/Ylert-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Ylert/Ylert.modulemap";
 				PRODUCT_MODULE_NAME = Ylert;
@@ -593,7 +588,8 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -697,9 +693,9 @@
 			};
 			name = Release;
 		};
-		EF947BBC6B048BC1C684F76DAE645E03 /* Debug */ = {
+		E00EC4A353F1CB88AC50BC5234DD76AB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 678D12F5FF0DA2202015D46AFF35D284 /* Ylert.xcconfig */;
+			baseConfigurationReference = 2B7B35C055C7A6FE9D18A0CC718363D0 /* Ylert.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -713,7 +709,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Ylert/Ylert-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Ylert/Ylert-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Ylert/Ylert.modulemap";
 				PRODUCT_MODULE_NAME = Ylert;
@@ -752,8 +748,8 @@
 		665E6AF9DAFA123B158F7E2774FE8E28 /* Build configuration list for PBXNativeTarget "Ylert" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EF947BBC6B048BC1C684F76DAE645E03 /* Debug */,
-				789CBB8ABACD1478B89D70FA4874879D /* Release */,
+				E00EC4A353F1CB88AC50BC5234DD76AB /* Debug */,
+				A16001328CA6AA69251BDD7693E69171 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
