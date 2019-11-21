@@ -5,7 +5,7 @@
 //  Created by Podul on 2019/11/9.
 //
 
-import Foundation
+import UIKit
 
 
 public typealias AlertActionHandler = (UIAlertAction) -> Void
@@ -82,6 +82,7 @@ extension AlertMaker {
             }
             alertVC.addAction(action)
         }
+        
         
         self.present(alertVC)
     }
