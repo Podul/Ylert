@@ -15,7 +15,7 @@ public typealias TextFieldHandler = (UITextField) -> Void
 private struct AlertAction {
     let style: UIAlertAction.Style
     let title: String
-    let handler: AlertActionHandler?
+    let handler: AlertActionHandler
 }
 
 public class AlertMaker {
@@ -47,25 +47,25 @@ extension AlertMaker {
         return self
     }
     
-    public func cancel(_ title: String, handler: @escaping AlertActionHandler = {_ in }) -> AlertMaker {
+    public func cancel(_ title: String, handler: @escaping AlertActionHandler = { _ in }) -> AlertMaker {
         let action = AlertAction(style: .cancel, title: title, handler: handler)
         alertActions.append(action)
         return self
     }
     
-    public func `default`(_ title: String, handler: @escaping AlertActionHandler = {_ in }) -> AlertMaker {
+    public func `default`(_ title: String, handler: @escaping AlertActionHandler = { _ in }) -> AlertMaker {
         let action = AlertAction(style: .default, title: title, handler: handler)
         alertActions.append(action)
         return self
     }
     
-    public func destructive(_ title: String, handler: @escaping AlertActionHandler = {_ in }) -> AlertMaker {
+    public func destructive(_ title: String, handler: @escaping AlertActionHandler = { _ in }) -> AlertMaker {
         let action = AlertAction(style: .destructive, title: title, handler: handler)
         alertActions.append(action)
         return self
     }
     
-    public func textField(_ handler: @escaping TextFieldHandler = {_ in }) -> AlertMaker {
+    public func textField(_ handler: @escaping TextFieldHandler = { _ in }) -> AlertMaker {
         textFieldHandlers.append(handler)
         return self
     }
@@ -73,7 +73,8 @@ extension AlertMaker {
 
 /// show
 extension AlertMaker {
-    public func show() {
+    @discardableResult
+    public func show() -> AlertMaker {
         let alertVC = UIAlertController(title: title, message: message, preferredStyle: style)
         
         for handler in textFieldHandlers {
@@ -83,8 +84,8 @@ extension AlertMaker {
         // actions
         for alertAction in self.alertActions {
             let action = UIAlertAction(title: alertAction.title, style: alertAction.style) {
+                alertAction.handler($0)
                 self.dismiss(alertVC)
-                alertAction.handler?($0)
             }
             alertVC.addAction(action)
         }
@@ -92,11 +93,13 @@ extension AlertMaker {
         DispatchQueue.main.async {
             self.present(alertVC)
         }
+        return self
     }
+    
 }
 
 extension AlertMaker {
-    static let alertWindow: UIWindow = {
+    private static let alertWindow: UIWindow = {
         var window: UIWindow
         if #available(iOS 13.0, *) {
             let connectedScenes = UIApplication.shared.connectedScenes;
@@ -118,7 +121,7 @@ extension AlertMaker {
     }()
     
     // MARK: - Window
-    func showWindow() {
+    private func showWindow() {
         if #available(iOS 13.0, *) {
             let connectedScenes = UIApplication.shared.connectedScenes;
             let scene = connectedScenes.filter { $0.activationState == .foregroundActive }.first
@@ -129,17 +132,17 @@ extension AlertMaker {
         AlertMaker.alertWindow.isHidden = false
     }
     
-    func hideWindow() {
+    private func hideWindow() {
         AlertMaker.alertWindow.isHidden = true
     }
     
     // MARK: - Controller
-    func present(_ alertController: UIAlertController) {
+    private func present(_ alertController: UIAlertController) {
         showWindow()
         AlertMaker.alertWindow.rootViewController?.present(alertController, animated: true)
     }
     
-    func dismiss(_ alertController: UIAlertController) {
+    private func dismiss(_ alertController: UIAlertController) {
         alertController.dismiss(animated: true)
         textFieldHandlers.removeAll()
         alertActions.removeAll()
