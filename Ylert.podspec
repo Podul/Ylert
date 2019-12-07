@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Ylert'
-  s.version          = '0.1.2'
+  s.version          = '0.1.3'
   s.summary          = 'Swift 写的 Alert 模块'
   s.swift_version    = '5.0'
 
