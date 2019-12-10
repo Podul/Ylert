@@ -11,7 +11,7 @@ import UIKit
 class TestViewController: UIViewController {
     
     deinit {
-        print(#function)
+        print("TestViewController is deinit")
     }
 
     override func viewDidLoad() {

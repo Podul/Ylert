@@ -8,27 +8,17 @@
 import UIKit
 
 
-public typealias AlertActionHandler = (UIAlertAction) -> Void
-public typealias TextFieldHandler = (UITextField) -> Void
+public typealias AlertActionHandler = (_ action: UIAlertAction) -> Void
+public typealias TextFieldHandler = (_ textField: UITextField) -> Void
 
 /// 持有 alertMaker 对象，不让它提前释放
 private var _maker: AlertMaker? = nil
 
 
-private class AlertAction {
+private struct AlertAction {
     let style: UIAlertAction.Style
     let title: String
-    var handler: AlertActionHandler!
-    
-    deinit {
-        print("alertaction is deinit")
-    }
-    
-    init(style: UIAlertAction.Style, title: String, handler: @escaping AlertActionHandler) {
-        self.style = style
-        self.title = title
-        self.handler = handler
-    }
+    let handler: AlertActionHandler
 }
 
 public class AlertMaker {
@@ -37,10 +27,6 @@ public class AlertMaker {
     fileprivate let style: UIAlertController.Style;
     fileprivate lazy var alertActions = [AlertAction]()
     fileprivate lazy var textFieldHandlers = [TextFieldHandler]()
-    
-    deinit {
-        print("alertmaker deinit")
-    }
     
     fileprivate init(style: UIAlertController.Style = .alert) {
         if #available(iOS 13.0, *) {
@@ -100,14 +86,14 @@ extension AlertMaker {
         for alertAction in self.alertActions {
             let action = UIAlertAction(title: alertAction.title, style: alertAction.style) {
                 alertAction.handler($0)
-                self.dismiss(alertVC)
+                self.dismiss()
             }
             alertVC.addAction(action)
         }
         
-//        DispatchQueue.main.async {
+        DispatchQueue.main.async {
             self.present(alertVC)
-//        }
+        }
     }
     
 }
@@ -156,13 +142,15 @@ extension AlertMaker {
         AlertMaker.alertWindow.rootViewController?.present(alertController, animated: true)
     }
     
-    private func dismiss(_ alertController: UIAlertController) {
-        alertController.dismiss(animated: true)
-        self.textFieldHandlers.removeAll()
-        self.alertActions.removeAll()
-        self.hideWindow()
-        _maker = nil
+    private func dismiss() {
+        AlertMaker.alertWindow.rootViewController?.dismiss(animated: true) {
+            self.textFieldHandlers.removeAll()
+            self.alertActions.removeAll()
+            self.hideWindow()
+            _maker = nil
+        }
     }
+    
 }
 
 
