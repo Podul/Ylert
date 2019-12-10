@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Ylert'
-  s.version          = '0.1.3'
-  s.summary          = 'Swift 写的 Alert 模块'
+  s.version          = '0.1.4'
+  s.summary          = 'Swift Alert 链式调用'
   s.swift_version    = '5.0'
 
 # This description is used to generate tags and improve search results.
