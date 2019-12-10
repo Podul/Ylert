@@ -11,11 +11,24 @@ import UIKit
 public typealias AlertActionHandler = (UIAlertAction) -> Void
 public typealias TextFieldHandler = (UITextField) -> Void
 
+/// 持有 alertMaker 对象，不让它提前释放
+private var _maker: AlertMaker? = nil
 
-private struct AlertAction {
+
+private class AlertAction {
     let style: UIAlertAction.Style
     let title: String
-    let handler: AlertActionHandler
+    var handler: AlertActionHandler!
+    
+    deinit {
+        print("alertaction is deinit")
+    }
+    
+    init(style: UIAlertAction.Style, title: String, handler: @escaping AlertActionHandler) {
+        self.style = style
+        self.title = title
+        self.handler = handler
+    }
 }
 
 public class AlertMaker {
@@ -25,6 +38,9 @@ public class AlertMaker {
     fileprivate lazy var alertActions = [AlertAction]()
     fileprivate lazy var textFieldHandlers = [TextFieldHandler]()
     
+    deinit {
+        print("alertmaker deinit")
+    }
     
     fileprivate init(style: UIAlertController.Style = .alert) {
         if #available(iOS 13.0, *) {
@@ -73,8 +89,7 @@ extension AlertMaker {
 
 /// show
 extension AlertMaker {
-    @discardableResult
-    public func show() -> AlertMaker {
+    public func show() {
         let alertVC = UIAlertController(title: title, message: message, preferredStyle: style)
         
         for handler in textFieldHandlers {
@@ -90,10 +105,9 @@ extension AlertMaker {
             alertVC.addAction(action)
         }
         
-        DispatchQueue.main.async {
+//        DispatchQueue.main.async {
             self.present(alertVC)
-        }
-        return self
+//        }
     }
     
 }
@@ -144,26 +158,28 @@ extension AlertMaker {
     
     private func dismiss(_ alertController: UIAlertController) {
         alertController.dismiss(animated: true)
-        textFieldHandlers.removeAll()
-        alertActions.removeAll()
-        hideWindow()
+        self.textFieldHandlers.removeAll()
+        self.alertActions.removeAll()
+        self.hideWindow()
+        _maker = nil
     }
 }
+
 
 // MARK: - UIAlertController extension
 public extension UIAlertController {
     /// Alert 样式
     static var alert: AlertMaker {
         get {
-            let maker = AlertMaker(style: .alert)
-            return maker
+            _maker = AlertMaker(style: .alert)
+            return _maker!
         }
     }
     
     /// ActionSheet 样式
     static func actionSheet() -> AlertMaker {
-        let maker = AlertMaker(style: .actionSheet)
-        return maker
+        _maker = AlertMaker(style: .actionSheet)
+        return _maker!
     }
 }
 

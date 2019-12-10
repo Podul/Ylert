@@ -14,22 +14,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        view.backgroundColor = .green
     }
     
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
-        UIAlertController
-            .actionSheet()
-            .title("title")
-            .message("message")
-            .destructive("Destructive")
-            .cancel("Cancel") { _ in
-                print("touched cancel")
-        }
-        .default("Default")
-        .show()
+        present(TestViewController(), animated: true)
     }
     
     override func didReceiveMemoryWarning() {
