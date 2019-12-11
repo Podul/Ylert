@@ -28,6 +28,9 @@ public class AlertMaker {
     fileprivate lazy var alertActions = [AlertAction]()
     fileprivate lazy var textFieldHandlers = [TextFieldHandler]()
     
+    deinit {
+        print("alertmaker deinit")
+    }
     fileprivate init(style: UIAlertController.Style = .alert) {
         if #available(iOS 13.0, *) {
             // 有多个 Scenes 时，Window 会出现问题。
@@ -98,57 +101,20 @@ extension AlertMaker {
     
 }
 
+
 extension AlertMaker {
-    private static let alertWindow: UIWindow = {
-        var window: UIWindow
-        if #available(iOS 13.0, *) {
-            let connectedScenes = UIApplication.shared.connectedScenes;
-            let scene = connectedScenes.filter { $0.activationState == .foregroundActive }.first
-            if let windowScene = scene as? UIWindowScene {
-                window = UIWindow(windowScene: windowScene)
-            }else {
-                window = UIWindow(frame: UIScreen.main.bounds)
-            }
-        } else {
-            window = UIWindow(frame: UIScreen.main.bounds)
-        }
-        window.windowLevel = .alert;
-        
-        let rootVC = UIViewController()
-        rootVC.view.backgroundColor = .clear
-        window.rootViewController = rootVC
-        return window
-    }()
-    
-    // MARK: - Window
-    private func showWindow() {
-        if #available(iOS 13.0, *) {
-            let connectedScenes = UIApplication.shared.connectedScenes;
-            let scene = connectedScenes.filter { $0.activationState == .foregroundActive }.first
-            if let windowScene = scene as? UIWindowScene {
-                AlertMaker.alertWindow.windowScene = windowScene
-            }
-        }
-        AlertMaker.alertWindow.isHidden = false
-    }
-    
-    private func hideWindow() {
-        AlertMaker.alertWindow.isHidden = true
-    }
     
     // MARK: - Controller
     private func present(_ alertController: UIAlertController) {
-        showWindow()
-        AlertMaker.alertWindow.rootViewController?.present(alertController, animated: true)
+        AlertWindow.show()
+        AlertWindow.shared.rootViewController?.present(alertController, animated: true)
     }
     
     private func dismiss() {
-        AlertMaker.alertWindow.rootViewController?.dismiss(animated: true) {
-            self.textFieldHandlers.removeAll()
-            self.alertActions.removeAll()
-            self.hideWindow()
-            _maker = nil
-        }
+        AlertWindow.shared.rootViewController?.dismiss(animated: true)
+        AlertWindow.hide()
+        _maker = nil
+        
     }
     
 }
@@ -171,3 +137,42 @@ public extension UIAlertController {
     }
 }
 
+
+// MARK: - AlertWindow
+fileprivate struct AlertWindow {
+    static let shared: UIWindow = {
+        var window: UIWindow
+        if #available(iOS 13.0, *) {
+            let connectedScenes = UIApplication.shared.connectedScenes;
+            let scene = connectedScenes.filter { $0.activationState == .foregroundActive }.first
+            if let windowScene = scene as? UIWindowScene {
+                window = UIWindow(windowScene: windowScene)
+            }else {
+                window = UIWindow(frame: UIScreen.main.bounds)
+            }
+        } else {
+            window = UIWindow(frame: UIScreen.main.bounds)
+        }
+        window.windowLevel = .alert;
+        
+        let rootVC = UIViewController()
+        rootVC.view.backgroundColor = .clear
+        window.rootViewController = rootVC
+        return window
+    }()
+    
+    static func show() {
+        if #available(iOS 13.0, *) {
+            let connectedScenes = UIApplication.shared.connectedScenes;
+            let scene = connectedScenes.filter { $0.activationState == .foregroundActive }.first
+            if let windowScene = scene as? UIWindowScene {
+                shared.windowScene = windowScene
+            }
+        }
+        shared.isHidden = false
+    }
+    
+    static func hide() {
+        shared.isHidden = true
+    }
+}

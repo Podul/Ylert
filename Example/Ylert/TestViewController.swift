@@ -9,7 +9,7 @@
 import UIKit
 
 class TestViewController: UIViewController {
-    
+    var textField: UITextField?
     deinit {
         print("TestViewController is deinit")
     }
@@ -20,9 +20,12 @@ class TestViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         UIAlertController
-            .actionSheet()
+            .alert
             .title("title")
             .message("message")
+            .textField {
+                self.textField = $0
+            }
             .destructive("Destructive")
             .cancel("Cancel") { _ in
                 self.view.backgroundColor = .white
