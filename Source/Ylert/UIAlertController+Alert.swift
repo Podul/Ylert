@@ -28,9 +28,6 @@ public class AlertMaker {
     fileprivate lazy var alertActions = [AlertAction]()
     fileprivate lazy var textFieldHandlers = [TextFieldHandler]()
     
-    deinit {
-        print("alertmaker deinit")
-    }
     fileprivate init(style: UIAlertController.Style = .alert) {
         if #available(iOS 13.0, *) {
             // 有多个 Scenes 时，Window 会出现问题。
@@ -114,7 +111,6 @@ extension AlertMaker {
         AlertWindow.shared.rootViewController?.dismiss(animated: true)
         AlertWindow.hide()
         _maker = nil
-        
     }
     
 }
